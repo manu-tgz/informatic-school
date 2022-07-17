@@ -310,3 +310,32 @@ AFTER INSERT
 ON computadoras
 FOR EACH ROW
 EXECUTE PROCEDURE update_cant_computadoras();
+
+
+CREATE FUNCTION bitacora_computadora_hora("computadora_input" integer, "local_input" integer)
+    RETURNS TABLE(id_docente integer, hora time) 
+    LANGUAGE 'sql'
+
+AS $BODY$
+SELECT
+    id_docente, hora
+FROM
+    bitacora_computadoras
+WHERE
+    bitacora_computadoras.id_computadora = computadora_input
+    and bitacora_computadoras.id_local = local_input          
+$BODY$;
+
+
+CREATE FUNCTION bitacora_local_hora("local_input" integer)     
+    RETURNS TABLE(id_docente integer, hora time) 
+    LANGUAGE 'sql'
+
+AS $BODY$
+SELECT
+    id_docente, hora
+FROM
+    bitacora_locales
+WHERE
+    bitacora_locales.id_local = local_input          
+$BODY$;

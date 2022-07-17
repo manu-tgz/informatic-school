@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS bitacora_locales (                     
-    id int NOT NULL,
+    id serial NOT NULL,
     id_local int NOT NULL,
     id_docente int NOT NULL,
     hora time NOT NULL

@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS bitacora_computadoras (                     
-    id int NOT NULL,
+    id serial NOT NULL,
     id_computadora int NOT NULL,
     id_local int NOT NULL,
     id_docente int NOT NULL,

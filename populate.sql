@@ -92,17 +92,25 @@ VALUES
 
 --region bitacora_computadoras
 INSERT INTO
-    bitacora_computadoras (id, id_computadora,id_local,id_docente,hora)       
-VALUES
-(1, 1, 1, 1, '00:10:20'),
-(2, 2, 2, 2, '00:50:20'),
-(3, 1, 2, 2, '01:00:20'),
-(4, 1, 3, 2, '05:00:20');
-
-INSERT INTO
-    bitacora_locales (id,id_local,id_docente,hora)     
+    bitacora_computadoras (id_computadora,id_local,id_docente,hora)       
 VALUES
 (1, 1, 1, '00:10:20'),
 (2, 2, 2, '00:50:20'),
-(3, 2, 2, '01:00:20'),
-(4, 3, 2, '05:00:20');
+(1, 2, 2, '01:00:20'),
+(1, 3, 2, '05:00:20'),
+(1, 1, 1, '07:10:20'),
+(1, 1, 2, '03:50:20'),
+(1, 1, 2, '04:00:20'),
+(1, 1, 2, '06:00:50');
+
+INSERT INTO
+    bitacora_locales (id_local,id_docente,hora)     
+VALUES
+(1, 1, '00:10:20'),
+(2, 2, '00:50:20'),
+(2, 2, '01:00:20'),
+(3, 2, '05:00:20'),
+(1, 1, '00:10:21'),
+(1, 3, '06:50:26'),
+(1, 4, '04:00:20'),
+(1, 6, '08:00:20');
